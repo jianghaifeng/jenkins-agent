@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift
+FROM openshift/jenkins-agent-maven-35-centos7:v3.11
 USER root
 
 ENV PATH=$PATH:/opt/gradle/bin
