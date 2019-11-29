@@ -7,8 +7,6 @@ spec:
     git:
       ref: master
       uri: https://github.com/jianghaifeng/jenkins-agent.git
-    sourceSecret:
-      name: github
     contextDir: /
     type: Git
     runPolicy: Parallel
