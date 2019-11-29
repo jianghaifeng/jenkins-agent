@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  name: agent-gradle-docker-build
+spec:
+  source:
+    git:
+      ref: master
+      uri: https://github.com/jianghaifeng/jenkins-agent.git
+    sourceSecret:
+      name: github
+    contextDir: /
+    type: Git
+    runPolicy: Parallel
+  strategy:
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+    type: Docker
+  output:
+    to:
+      kind: ImageStreamTag
+      name: gradle:latest

@@ -1,0 +1,6 @@
+kind: ImageStream
+apiVersion: v1
+metadata:
+  name: gradle
+  labels:
+    app: gradle
